@@ -16,7 +16,7 @@ let userName
 let nameBottom = document.querySelector('.name_bottom');
 
 btnTicket.addEventListener('click',
-function() {
+    function () {
         userName = document.querySelector('.name_ticket').value;
         nameBottom.innerHTML = nameBottom.innerHTML + userName;
 
@@ -24,10 +24,10 @@ function() {
 )
 
 //chiedere chilometri da percorrere
-let kmRequest 
+let kmRequest
 
 btnTicket.addEventListener('click',
-    function() {
+    function () {
         kmRequest = Number(document.querySelector('.km_ticket').value)
         console.log("chilometri", kmRequest);
     }
@@ -37,7 +37,7 @@ btnTicket.addEventListener('click',
 let userAge;
 
 btnTicket.addEventListener('click',
-    function() {
+    function () {
         userAge = document.getElementById('age').value
         console.log("fascia", userAge);
     }
@@ -47,26 +47,35 @@ btnTicket.addEventListener('click',
 
 //calcolo prezzo al chilometro
 let ticketPrice
-let finalPrice = document.querySelector('.final_price');
 
 btnTicket.addEventListener('click',
-function() {
-    ticketPrice = kmRequest * price;
-    console.log('prezzo non scontato', ticketPrice);
-    finalPrice.innerHTML = finalPrice.innerHTML + ticketPrice
+    function () {
+        ticketPrice = kmRequest * price;
+        console.log('prezzo non scontato', ticketPrice);
     }
 )
 
 //calcolo delo sconto
-if (userAge < 18) {
-    discount = ticketPrice * 0.20;
-} else if (userAge > 65) {
-    discount = ticketPrice * 0.40;
-} else {
-    discount = 0;
-}
-console.log("sconto", discount);
+btnTicket.addEventListener('click',
+    function () {
+        if (userAge == "minorenne") {
+            discount = ticketPrice * 0.20;
+            console.log("sconto", discount);
+        } else if (userAge == 'over_65') {
+            discount = ticketPrice * 0.40;
+            console.log("sconto", discount);
+        } else {
+            discount = 0;
+            console.log("sconto", discount);
+        }
+    }
+)
+
+
 
 //totale da pagare
-ticketPrice = ticketPrice - discount;0
+let finalPrice = document.querySelector('.final_price');
+finalPrice.innerHTML = finalPrice.innerHTML + ticketPrice
+
+ticketPrice = ticketPrice - discount; 0
 console.log("Il totale da pagare è € ", ticketPrice);
