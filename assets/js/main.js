@@ -13,11 +13,11 @@ let btnTicket = document.getElementById('start');
 
 //chidere nome e cognome
 let userName
-let nameBottom = document.getElementById('name_bottom');
+let nameBottom = document.querySelector('.name_bottom');
 
 btnTicket.addEventListener('click',
 function() {
-        userName = document.getElementById('name_ticket').value;
+        userName = document.querySelector('.name_ticket').value;
         nameBottom.innerHTML = nameBottom.innerHTML + userName;
 
     }
@@ -28,7 +28,7 @@ let kmRequest
 
 btnTicket.addEventListener('click',
     function() {
-        kmRequest = Number(document.getElementById('km_ticket').value)
+        kmRequest = Number(document.querySelector('.km_ticket').value)
         console.log("chilometri", kmRequest);
     }
 )
@@ -38,7 +38,7 @@ let userAge;
 
 btnTicket.addEventListener('click',
     function() {
-        userAge = document.getElementById('discount_ticket').value
+        userAge = document.querySelector('.discount_ticket').value
         console.log("fascia", userAge);
     }
 )
@@ -47,7 +47,7 @@ btnTicket.addEventListener('click',
 
 //calcolo prezzo al chilometro
 let ticketPrice
-let finalPrice = document.getElementById('final_price');
+let finalPrice = document.querySelector('.final_price');
 
 btnTicket.addEventListener('click',
 function() {
