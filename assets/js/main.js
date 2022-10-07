@@ -103,3 +103,19 @@ btnTicket.addEventListener('click',
 )
 
 //assegnazione carrozza
+let randomWagon = document.querySelector('.random')
+
+btnTicket.addEventListener('click',
+    function () {
+        randomWagon.innerHTML = Math.floor(Math.random() * 10) + 1;
+    }
+)
+
+//assegnazione codice cp
+let cpCode = document.querySelector('.cp_code')
+
+btnTicket.addEventListener('click',
+    function () {
+        cpCode.innerHTML = Math.floor(Math.random() * 99999) + 11111;
+    }
+)
