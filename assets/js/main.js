@@ -53,7 +53,7 @@ btnTicket.addEventListener('click',
 function() {
     ticketPrice = kmRequest * price;
     console.log('prezzo non scontato', ticketPrice);
-    finalPrice.innerHTML = finalPrice.innerHTML + ticketprice
+    finalPrice.innerHTML = finalPrice.innerHTML + ticketPrice
     }
 )
 
