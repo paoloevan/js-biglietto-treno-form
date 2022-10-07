@@ -78,8 +78,28 @@ let finalPrice = document.querySelector('.final_price');
 
 btnTicket.addEventListener('click',
     function () {
-        ticketPrice = ticketPrice - discount; 
+        ticketPrice = ticketPrice - discount;
         finalPrice.innerHTML = ticketPrice
         console.log("Il totale da pagare è € ", ticketPrice);
-    } 
+    }
 )
+
+//inserimento tipo offerta nel biglietto
+let discountType = document.querySelector('.discount_type');
+
+btnTicket.addEventListener('click',
+    function () {
+        if (userAge == "minorenne") {
+            discountType.innerHTML = 'Sconto Minorenne'
+            console.log("cccc", discountType);
+        } else if (userAge == 'over_65') {
+            discountType.innerHTML = 'Sconto Over 65'
+            console.log("sconto", discount);
+        } else {
+            discountType.innerHTML = 'Nessuno sconto'
+            console.log("sconto", discount);
+        }
+    }
+)
+
+//assegnazione carrozza
