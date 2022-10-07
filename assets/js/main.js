@@ -28,7 +28,7 @@ let kmRequest
 
 btnTicket.addEventListener('click',
     function() {
-        kmRequest = document.getElementById('km_ticket').value
+        kmRequest = Number(document.getElementById('km_ticket').value)
         console.log("chilometri", kmRequest);
     }
 )
@@ -47,7 +47,14 @@ btnTicket.addEventListener('click',
 
 //calcolo prezzo al chilometro
 let ticketPrice = kmRequest * price;
-console.log("prezzo non scontato", ticketPrice);
+let finalPrice = document.querySelector('discount_type');
+console.log('prezzo non scontato', ticketPrice);
+
+btnTicket.addEventListener('click',
+function() {
+        finalPrice.innerHTML = finalPrice.innerHTML + ticketPrice
+    }
+)
 
 //calcolo delo sconto
 if (userAge < 18) {
