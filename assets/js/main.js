@@ -79,7 +79,7 @@ let finalPrice = document.querySelector('.final_price');
 btnTicket.addEventListener('click',
     function () {
         ticketPrice = ticketPrice - discount;
-        finalPrice.innerHTML = ticketPrice
+        finalPrice.innerHTML = `€ ${ticketPrice.toFixed(2)}` 
         console.log("Il totale da pagare è € ", ticketPrice);
     }
 )
