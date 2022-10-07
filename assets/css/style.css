@@ -31,3 +31,7 @@ body {
     border-radius: 5px;
     padding: 0.25rem 0;
 }
+
+.my_ticket {
+    background-color: white;
+}
