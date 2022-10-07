@@ -38,7 +38,7 @@ let userAge;
 
 btnTicket.addEventListener('click',
     function() {
-        userAge = document.querySelector('.discount_ticket').value
+        userAge = document.getElementById('age').value
         console.log("fascia", userAge);
     }
 )
