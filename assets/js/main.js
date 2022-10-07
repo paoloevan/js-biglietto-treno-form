@@ -46,13 +46,13 @@ btnTicket.addEventListener('click',
 
 
 //calcolo prezzo al chilometro
-let ticketPrice = kmRequest * price;
+let ticketPrice
 let finalPrice = document.querySelector('discount_type');
-console.log('prezzo non scontato', ticketPrice);
 
 btnTicket.addEventListener('click',
 function() {
-        finalPrice.innerHTML = finalPrice.innerHTML + ticketPrice
+    ticketPrice = kmRequest * price;
+    console.log('prezzo non scontato', ticketPrice);
     }
 )
 
