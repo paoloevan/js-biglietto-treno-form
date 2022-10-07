@@ -13,11 +13,13 @@ let btnTicket = document.getElementById('start');
 
 //chidere nome e cognome
 let userName
-let nameBottom = document.querySelector('name_bottom');
+let nameBottom = document.getElementById('name_bottom');
+
 btnTicket.addEventListener('click',
 function() {
         userName = document.getElementById('name_ticket').value;
-        nameBottom = userName
+        nameBottom.innerHTML = nameBottom.innerHTML + userName;
+
     }
 )
 
