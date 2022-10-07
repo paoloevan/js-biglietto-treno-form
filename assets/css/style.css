@@ -39,3 +39,6 @@ body {
 .my_ticket {
     background-color: white;
 }
+.my_ticket .bg-secondary {
+    height: 6rem;
+}
