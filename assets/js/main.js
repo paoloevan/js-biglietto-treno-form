@@ -11,11 +11,11 @@ const price = 0.21
 let discount;
 
 //chiedere chilometri da percorrere
-const kmRequest = Number(prompt("Quanti chilometri devi percorre?"));
+//const kmRequest = Number(prompt("Quanti chilometri devi percorre?"));
 console.log("chilometri", kmRequest);
 
 //chiedere età del passeggero
-const userAge = Number(prompt("Quanti anni hai?"));
+//const userAge = Number(prompt("Quanti anni hai?"));
 console.log("anni", userAge);
 
 //calcolo prezzo al chilometro
