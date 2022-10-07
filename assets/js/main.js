@@ -9,14 +9,39 @@ va applicato uno sconto del 40% per gli over 65.
 
 const price = 0.21
 let discount;
+let btnTicket = document.getElementById('start');
+
+//chidere nome e cognome
+let userName
+let nameBottom = document.querySelector('name_bottom');
+btnTicket.addEventListener('click',
+function() {
+        userName = document.getElementById('name_ticket').value;
+        nameBottom = userName
+    }
+)
 
 //chiedere chilometri da percorrere
-//const kmRequest = Number(prompt("Quanti chilometri devi percorre?"));
-console.log("chilometri", kmRequest);
+let kmRequest 
+
+btnTicket.addEventListener('click',
+    function() {
+        kmRequest = document.getElementById('km_ticket').value
+        console.log("chilometri", kmRequest);
+    }
+)
 
 //chiedere età del passeggero
-//const userAge = Number(prompt("Quanti anni hai?"));
-console.log("anni", userAge);
+let userAge;
+
+btnTicket.addEventListener('click',
+    function() {
+        userAge = document.getElementById('discount_ticket').value
+        console.log("fascia", userAge);
+    }
+)
+
+
 
 //calcolo prezzo al chilometro
 let ticketPrice = kmRequest * price;
