@@ -8,15 +8,30 @@ va applicato uno sconto del 40% per gli over 65.
 */
 
 const price = 0.21
+let discount;
 
 //chiedere chilometri da percorrere
-const kmRequest = prompt("Quanti chilometri devi percorre?");
+const kmRequest = Number(prompt("Quanti chilometri devi percorre?"));
 console.log("chilometri", kmRequest);
 
 //chiedere età del passeggero
-const userAge = prompt("Quanti anni hai?");
+const userAge = Number(prompt("Quanti anni hai?"));
 console.log("anni", userAge);
 
 //calcolo prezzo al chilometro
 let ticketPrice = kmRequest * price;
+console.log("prezzo non scontato", ticketPrice);
 
+//calcolo delo sconto
+if (userAge < 18) {
+    discount = ticketPrice * 0.20;
+} else if (userAge > 65) {
+    discount = ticketPrice * 0.40;
+} else {
+    discount = 0;
+}
+console.log("sconto", discount);
+
+//totale da pagare
+ticketPrice = ticketPrice - discount;0
+console.log("Il totale da pagare è € ", ticketPrice);
